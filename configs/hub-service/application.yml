@@ -2,10 +2,10 @@ server:
   port: 3003
 
 message:
-  test1: '(수정)테스트 메세지1'
-  test2: '(수정)테스트 메세지2'
+  test1: '(재수정)테스트 메세지1'
+  test2: '(재수정)테스트 메세지2'
 
-message3: '(수정)테스트 메세지3'
+message3: '(재수정)테스트 메세지3'
 
 management:
   endpoints:
