@@ -5,3 +5,11 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+
+      routes:
+        - id: hub-service
+          uri: lb://hub-service
+          predicates:
+            - Path=/v1/hub/**
+          filters:
+            - 'RewirtePath=/v1/hub/(?<path>.*), /\${path}'

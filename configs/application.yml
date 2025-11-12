@@ -9,10 +9,10 @@ feign:
     default: # 공통 설정
       connectTimeout: 5000
       readTimeout: 5000
-      loggerLevel: FULL
-
+      loggerLevel: full
 
 management:
   endpoints:
     web:
-      exposure: refresh
+      exposure:
+        include: refresh
