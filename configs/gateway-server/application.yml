@@ -72,10 +72,3 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://13.210.162.214:3150/eureka/
-
-management:
-  endpoint:
-    metrics:
-      access: READ_ONLY
-    prometheus:
-      access: READ_ONLY
