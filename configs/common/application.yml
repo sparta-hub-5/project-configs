@@ -62,9 +62,9 @@ management:
         include: refresh,health,info,prometheus,metrics
   endpoint:
     prometheus:
-      enabled: true
+      access: READ_ONLY
     metrics:
-      enabled: true
+      access: READ_ONLY
       export:
         prometheus:
           enabled: true
