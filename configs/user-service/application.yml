@@ -1,0 +1,30 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: user-service
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${JWT_ISSUER_URI}
+eureka:
+  instance:
+    prefer-ip-address: false
+    hostname: localhost
+
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://13.210.162.214:3150/eureka/
+
+keycloak:
+  server-url: https://keycloak.code-factory.co.kr/
+  realm: bangbang-hub
+  client-id: ${KEYCLOAK_CLIENT_ID}
+  client-secret: ${KEYCLOAK_CLIENT_SECRET}
+  admin-username: ${KEYCLOAK_ADMIN_USERNAME}
+  admin-password: ${KEYCLOAK_ADMIN_PASSWORD}
