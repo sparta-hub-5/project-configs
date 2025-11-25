@@ -1,0 +1,42 @@
+server:
+  port: 10097
+
+spring:
+  application:
+    name: aggregate-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      fail-fast: true
+      retry:
+        initial-interval: 2000
+        max-attempts: 30
+        max-interval: 6000
+  kafka:
+    bootstrap-servers: kafka:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      retries: 3
+      acks: all
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+external-api:
+  naver:
+    base-url: https://openapi.naver.com/v1
+    client-id: YOUR_NAVER_CLIENT_ID
+    client-secret: YOUR_NAVER_CLIENT_SECRET
+kafka:
+  topic:
+    external-complete: external.api.complete
+    external-fail: external.api.fail
+
+webclient:
+  connect-timeout: 3000
+  read-timeout: 5000
