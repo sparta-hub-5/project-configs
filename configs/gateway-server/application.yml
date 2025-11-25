@@ -99,9 +99,9 @@ springdoc:
     operations-sorter: alpha
     tags-sorter: alpha
     doc-expansion: full
-    config-url: /v3/api-docs/swagger-config
+    config-url: /v1/api-docs/swagger-config
     urls:
-      - url: /user-service/v3/api-docs
+      - url: /user-service/v1/api-docs
         name: USER API
-      - url: /hub-service/v3/api-docs
+      - url: /hub-service/v1/api-docs
         name: HUB API
