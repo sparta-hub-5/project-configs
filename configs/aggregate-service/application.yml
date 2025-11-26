@@ -14,7 +14,13 @@ spring:
         initial-interval: 2000
         max-attempts: 30
         max-interval: 6000
-
+  kafka:
+    bootstrap-servers: kafka:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      retries: 3
+      acks: all
 
 eureka:
   client:
